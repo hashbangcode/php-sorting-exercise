@@ -1,0 +1,33 @@
+{
+    "name": "hashbangcode/php-sorting-exercise",
+    "description": "PHP Sorting Algorithms Exercise: An exercise package to create sorting algorithms using PHP.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philip Norton",
+            "email": "philipnorton42@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hashbangcode\\Sort\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hashbangcode\\Sort\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test" : "./vendor/bin/phpunit --do-not-cache-result --verbose tests",
+        "test-bubble" : "./vendor/bin/phpunit --do-not-cache-result --verbose --filter=BubbleSort tests",
+        "test-quick" : "./vendor/bin/phpunit --do-not-cache-result --verbose --filter=QuickSort tests",
+        "phpcs" : "./vendor/bin/phpcs --standard=PSR12 src tests",
+        "phpcbf" : "./vendor/bin/phpcbf --standard=PSR12 src tests"
+    },
+    "require": {
+        "php": ">=7.4",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
+    }
+}
